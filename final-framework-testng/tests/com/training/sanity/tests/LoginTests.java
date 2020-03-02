@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
+import com.training.pom.CustomersPOM;
 import com.training.pom.LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -22,6 +23,7 @@ public class LoginTests {
 	private LoginPOM loginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
+	private CustomersPOM customersPOM;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -45,11 +47,60 @@ public class LoginTests {
 		Thread.sleep(1000);
 		driver.quit();
 	}
-	@Test
-	public void validLoginTest() {
+	@Test()
+	public void deleteReturnlist() throws InterruptedException {
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("First");
+		screenShot.captureScreenShot("TC19_1");
+		//for selecting return
+		loginPOM.returnIdcheckbox();
+		screenShot.captureScreenShot("TC19_3");
+		loginPOM.alert();
+		screenShot.captureScreenShot("TC19_4");
+		Thread.sleep(3000);
+		loginPOM.acceptingalert();
+		Thread.sleep(3000);
+		loginPOM.successmsg();
+		screenShot.captureScreenShot("TC19_5");
 	}
+	
+  @Test()
+   public void filtercustomerdetails() throws InterruptedException
+   {
+	  loginPOM.sendUserName("admin");
+		loginPOM.sendPassword("admin@123");
+		loginPOM.clickLoginBtn(); 
+		screenShot.captureScreenShot("TC20_1");
+		//click on customer link
+		customersPOM.customerName("Neha B");
+		customersPOM.FilterCustomer();
+		Thread.sleep(3000);
+		screenShot.captureScreenShot("TC20_3");
+		customersPOM.Email("neha3@gmail.com");
+		customersPOM.FilterCustomer();
+		Thread.sleep(3000);
+		screenShot.captureScreenShot("TC20_4");
+		
+   }
+  
+  @Test()
+  public void deleteCustomer() throws InterruptedException
+  {
+	  loginPOM.sendUserName("admin");
+		loginPOM.sendPassword("admin@123");
+		loginPOM.clickLoginBtn(); 
+		screenShot.captureScreenShot("TC21_1");
+		////click on customer link
+		customersPOM.customerName("Neha B");
+		customersPOM.Email("neha3@gmail.com");
+		customersPOM.FilterCustomer();
+		customersPOM.Checkbox();
+		screenShot.captureScreenShot("TC21_3");
+		customersPOM.Delete();
+		screenShot.captureScreenShot("TC21_4");
+		customersPOM.alert();
+		customersPOM.acceptingalert();
+  }
+	
 }

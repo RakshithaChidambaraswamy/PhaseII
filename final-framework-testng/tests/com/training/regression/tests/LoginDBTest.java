@@ -16,6 +16,7 @@ import com.training.dao.ELearningDAO;
 import com.training.dataproviders.LoginDataProviders;
 import com.training.generics.GenericMethods;
 import com.training.generics.ScreenShot;
+import com.training.pom.CustomersPOM;
 import com.training.pom.LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -26,7 +27,8 @@ public class LoginDBTest {
 	private LoginPOM loginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
-	private GenericMethods genericMethods; 
+	private GenericMethods genericMethods;
+	
 	
 	
 	@BeforeClass
