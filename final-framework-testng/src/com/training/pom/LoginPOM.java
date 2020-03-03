@@ -1,6 +1,9 @@
 package com.training.pom;
 
+import java.util.List;
+
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,7 +29,7 @@ public class LoginPOM {
 	@FindBy(xpath="//button[@type ='submit']")
 	private WebElement loginBtn; 
 	
-	@FindBy(xpath= "//input[@value = '223']")
+	@FindBy(xpath= "//input[@value = '220']")
 	private WebElement returnidcheckbox;
 	
 	@FindBy(id ="input-return-id")
@@ -35,8 +38,11 @@ public class LoginPOM {
 	@FindBy(id ="button-filter")
 	private WebElement filterbutton;
 	
-	@FindBy(xpath ="//*[contains(text(),'No results!')]")
+	@FindBy(xpath ="//tbody/tr/td[contains(text(), 'No results!')]")
 	private WebElement result;
+	
+	@FindBy(xpath = "//button[@type='button']")
+	private WebElement delete;
 	
 	
 	public void sendUserName(String userName) {
@@ -53,6 +59,12 @@ public class LoginPOM {
 		this.loginBtn.click(); 
 	}
 	
+	public void deleteButton()
+	{
+		this.delete.click();
+	}
+	
+	
 	public void returnIdcheckbox()
 	{
 		this.returnidcheckbox.click();
@@ -67,22 +79,21 @@ public class LoginPOM {
 		System.out.println("select a return id to delete");
 	}
 			}
-	public void alert()
-	{
-		
-		String alertmsg = driver.switchTo().alert().getText();
-		System.out.println(alertmsg);
-			
-	}
+	
+	
+	
 	public void acceptingalert()
 	{
-		Alert a = driver.switchTo().alert();
-		a.accept();
+		Alert alert = driver.switchTo().alert();
+		String alertmsg = driver.switchTo().alert().getText();
+		System.out.println(alertmsg);
+		alert.accept();
+		
 	}
 	
 	public void successmsg()
 	{
-		this.returnid.sendKeys("223");
+		this.returnid.sendKeys("220");
 		this.filterbutton.click();
 		String r = this.result.getText();
 		if(r =="No results!")
@@ -94,6 +105,28 @@ public class LoginPOM {
 			System.out.println("you have done something wrong");
 		}
 		
+	}
+	public void selectingReturn() throws InterruptedException{
+		driver.findElement(By.xpath("//a[@class='parent']/i[@class='fa fa-shopping-cart fa-fw']")).click();
+		Thread.sleep(5000);
+
+		//driver.findElement(By.xpath("//ul[@class ='collapse in']")).click();
+		//Thread.sleep(10000);
+
+		List<WebElement> obj = driver.findElements(By.xpath("//li[@id='sale']/ul/li"));
+		
+		String flag;
+		for(int i=0;i<obj.size();i++)
+		{
+		WebElement element = obj.get(i);
+		flag=obj.get(i).getText();
+		if(flag.equals("Returns"))
+		{
+		element.click();
+		Thread.sleep(10000);
+		break;
+		}
+		}	
 	}
 		
 		

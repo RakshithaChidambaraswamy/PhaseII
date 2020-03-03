@@ -2,9 +2,12 @@ package com.training.sanity.tests;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -47,23 +50,25 @@ public class LoginTests {
 		Thread.sleep(1000);
 		driver.quit();
 	}
-	@Test()
+/*	@Test()
 	public void deleteReturnlist() throws InterruptedException {
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn(); 
 		screenShot.captureScreenShot("TC19_1");
-		//for selecting return
+		loginPOM.selectingReturn();
+		screenShot.captureScreenShot("TC19_2");
+		Thread.sleep(1000);
 		loginPOM.returnIdcheckbox();
 		screenShot.captureScreenShot("TC19_3");
-		loginPOM.alert();
-		screenShot.captureScreenShot("TC19_4");
-		Thread.sleep(3000);
+		loginPOM.deleteButton();
+		//screenShot.captureScreenShot("TC19_4");
 		loginPOM.acceptingalert();
 		Thread.sleep(3000);
 		loginPOM.successmsg();
+		Thread.sleep(3000);
 		screenShot.captureScreenShot("TC19_5");
-	}
+	}*/
 	
   @Test()
    public void filtercustomerdetails() throws InterruptedException
@@ -72,7 +77,8 @@ public class LoginTests {
 		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn(); 
 		screenShot.captureScreenShot("TC20_1");
-		//click on customer link
+		customersPOM.selectingCustomer();
+		screenShot.captureScreenShot("TC20_2");
 		customersPOM.customerName("Neha B");
 		customersPOM.FilterCustomer();
 		Thread.sleep(3000);
@@ -84,7 +90,7 @@ public class LoginTests {
 		
    }
   
-  @Test()
+ /* @Test()
   public void deleteCustomer() throws InterruptedException
   {
 	  loginPOM.sendUserName("admin");
@@ -101,6 +107,6 @@ public class LoginTests {
 		screenShot.captureScreenShot("TC21_4");
 		customersPOM.alert();
 		customersPOM.acceptingalert();
-  }
+  }*/
 	
 }

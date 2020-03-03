@@ -2,43 +2,24 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33668" started-at="2020-02-29T12:32:36Z" finished-at="2020-02-29T12:33:09Z">
+  <suite name="Default suite" duration-ms="14142" started-at="2020-03-02T14:25:24Z" finished-at="2020-03-02T14:25:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33668" started-at="2020-02-29T12:32:36Z" finished-at="2020-02-29T12:33:09Z">
+    <test name="Default test" duration-ms="14142" started-at="2020-03-02T14:25:24Z" finished-at="2020-03-02T14:25:38Z">
       <class name="com.training.sanity.tests.LoginTests">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="setUpBeforeClass" is-config="true" duration-ms="22" started-at="2020-02-29T18:02:36Z" finished-at="2020-02-29T18:02:36Z">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="setUpBeforeClass" is-config="true" duration-ms="4" started-at="2020-03-02T19:55:24Z" finished-at="2020-03-02T19:55:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="setUp" is-config="true" duration-ms="18437" started-at="2020-02-29T18:02:36Z" finished-at="2020-02-29T18:02:54Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="setUp" is-config="true" duration-ms="10821" started-at="2020-03-02T19:55:24Z" finished-at="2020-03-02T19:55:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="validLoginTest" duration-ms="13621" started-at="2020-02-29T18:02:54Z" finished-at="2020-02-29T18:03:08Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate an element using xpath=//input[@value = '223']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-J0OINBC5', ip: '192.168.0.158', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
+        <test-method status="FAIL" signature="filtercustomerdetails()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="filtercustomerdetails" duration-ms="1638" started-at="2020-03-02T19:55:35Z" finished-at="2020-03-02T19:55:36Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//input[@value = '223']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-J0OINBC5', ip: '192.168.0.158', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at com.training.pom.LoginPOM.returnIdcheckbox(LoginPOM.java:58)
-	at com.training.sanity.tests.LoginTests.validLoginTest(LoginTests.java:55)
+              <![CDATA[java.lang.NullPointerException
+	at com.training.sanity.tests.LoginTests.filtercustomerdetails(LoginTests.java:80)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -65,11 +46,11 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="tearDown" is-config="true" duration-ms="1560" started-at="2020-02-29T18:03:08Z" finished-at="2020-02-29T18:03:09Z">
+        </test-method> <!-- filtercustomerdetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="tearDown" is-config="true" duration-ms="1670" started-at="2020-03-02T19:55:36Z" finished-at="2020-03-02T19:55:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

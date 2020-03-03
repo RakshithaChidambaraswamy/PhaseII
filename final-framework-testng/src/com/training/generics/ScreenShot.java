@@ -66,7 +66,7 @@ public class ScreenShot {
 
 	public void captureScreenShot(String fileName){
 		
-		String path =  "C:\\Rakshitha\\Uniform_project\\Screenshots\\Uniform_TC19\\";
+		String path =  "C:\\Rakshitha\\Uniform_project\\Screenshots\\Uniform_TC20\\";
 	
 		// 1. create file 
 		// 2. capture screenshot from selenium 
