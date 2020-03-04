@@ -62,12 +62,7 @@ public void Delete()
 }
 
 
-public void alert()
-{
-	
-	
-		
-}
+
 public void acceptingalert()
 {
 	Alert alert = driver.switchTo().alert();
@@ -77,14 +72,18 @@ public void acceptingalert()
 }
 
 public void selectingCustomer() throws InterruptedException{
-	driver.findElement(By.xpath("//ul[@id='menu']/li[@id='customer']/a/i[@class='fa fa-user fa-fw']")).click();
+	driver.findElement(By.xpath("//li[@id='customer']/a/i")).click();
+	
+	Thread.sleep(5000);
+	
+	driver.findElement(By.xpath("//a[text()='Customers']")).click();
 	Thread.sleep(5000);
 
 	//driver.findElement(By.xpath("//ul[@class ='collapse in']")).click();
 	//Thread.sleep(10000);
 	//driver.findElement(By.xpath("//li[@id='customer']/a/following-sibling::ul/li/a[contains(text(), 'Customers')]")).click();
-	
-	List<WebElement> obj = driver.findElements(By.xpath("//li[@id='customer']/ul/li"));
+	/*
+	List<WebElement> obj = driver1.findElements(By.xpath("//li[@id='customer']/ul/li"));
 	
 	String flag;
 	for(int i=0;i<obj.size();i++)
@@ -98,5 +97,7 @@ public void selectingCustomer() throws InterruptedException{
 	break;
 	}
 	}	
+	
+	*/
 }
 }

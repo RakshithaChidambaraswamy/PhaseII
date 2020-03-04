@@ -1,56 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14142" started-at="2020-03-02T14:25:24Z" finished-at="2020-03-02T14:25:38Z">
+  <suite name="Default suite" duration-ms="34407" started-at="2020-03-04T07:56:38Z" finished-at="2020-03-04T07:57:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14142" started-at="2020-03-02T14:25:24Z" finished-at="2020-03-02T14:25:38Z">
+    <test name="Default test" duration-ms="34407" started-at="2020-03-04T07:56:38Z" finished-at="2020-03-04T07:57:13Z">
       <class name="com.training.sanity.tests.LoginTests">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="setUpBeforeClass" is-config="true" duration-ms="4" started-at="2020-03-02T19:55:24Z" finished-at="2020-03-02T19:55:24Z">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="setUpBeforeClass" is-config="true" duration-ms="12" started-at="2020-03-04T13:26:38Z" finished-at="2020-03-04T13:26:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="setUp" is-config="true" duration-ms="10821" started-at="2020-03-02T19:55:24Z" finished-at="2020-03-02T19:55:35Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="setUp" is-config="true" duration-ms="11650" started-at="2020-03-04T13:26:38Z" finished-at="2020-03-04T13:26:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="filtercustomerdetails()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="filtercustomerdetails" duration-ms="1638" started-at="2020-03-02T19:55:35Z" finished-at="2020-03-02T19:55:36Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.training.sanity.tests.LoginTests.filtercustomerdetails(LoginTests.java:80)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="filtercustomerdetails()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="filtercustomerdetails" duration-ms="21097" started-at="2020-03-04T13:26:50Z" finished-at="2020-03-04T13:27:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filtercustomerdetails -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="tearDown" is-config="true" duration-ms="1670" started-at="2020-03-02T19:55:36Z" finished-at="2020-03-02T19:55:38Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@2aaf7cc2]" name="tearDown" is-config="true" duration-ms="1642" started-at="2020-03-04T13:27:11Z" finished-at="2020-03-04T13:27:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
