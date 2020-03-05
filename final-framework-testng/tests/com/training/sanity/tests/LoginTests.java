@@ -51,7 +51,7 @@ public class LoginTests {
 		Thread.sleep(1000);
 		driver.quit();
 	}
-/*	@Test()
+	@Test()
 	public void deleteReturnlist() throws InterruptedException {
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
@@ -69,7 +69,7 @@ public class LoginTests {
 		loginPOM.successmsg();
 		Thread.sleep(3000);
 		screenShot.captureScreenShot("TC19_5");
-	}*/
+	}
 	
   @Test()
    public void filtercustomerdetails() throws InterruptedException
@@ -77,37 +77,35 @@ public class LoginTests {
 	  loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("TC20_1");
+		screenShot.captureScreenShot("TC20");
 		customersPOM.selectingCustomer();
-		screenShot.captureScreenShot("TC20_2");
+		screenShot.captureScreenShot("TC20");
 		customersPOM.customerName("Neha B");
 		customersPOM.FilterCustomer();
 		Thread.sleep(3000);
-		screenShot.captureScreenShot("TC20_3");
+		screenShot.captureScreenShot("TC20");
 		customersPOM.Email("neha3@gmail.com");
 		customersPOM.FilterCustomer();
 		Thread.sleep(3000);
-		screenShot.captureScreenShot("TC20_4");
+		screenShot.captureScreenShot("TC20");
 		
    }
   
- /* @Test()
+  @Test()
   public void deleteCustomer() throws InterruptedException
   {
 	  loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("TC21_1");
-		////click on customer link
+		screenShot.captureScreenShot("TC21");
+		customersPOM.selectingCustomer();
 		customersPOM.customerName("Neha B");
 		customersPOM.Email("neha3@gmail.com");
 		customersPOM.FilterCustomer();
 		customersPOM.Checkbox();
-		screenShot.captureScreenShot("TC21_3");
+		screenShot.captureScreenShot("TC21");
 		customersPOM.Delete();
-		screenShot.captureScreenShot("TC21_4");
-		customersPOM.alert();
 		customersPOM.acceptingalert();
-  }*/
+  }
 	
 }
