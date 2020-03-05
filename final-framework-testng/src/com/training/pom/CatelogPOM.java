@@ -27,7 +27,7 @@ private WebDriver driver;
 		this.selectproduct.click();
 	}
 	
-	@FindBy(xpath="//td[@class='text-center']/input[@value='575']")
+	@FindBy(xpath="//td[@class='text-center']/input[@value='620']")
 	private WebElement selectproductdel;
 	
 	public void selectProductdel(){
@@ -77,12 +77,12 @@ private WebDriver driver;
 		this.submit.click();
 	}
 	
-	@FindBy(xpath="//div[@id='content']/div[@class='container-fluid']/div/i")
+	@FindBy(xpath="//*[contains(text(),'Success: You have modified products!')]")
     private WebElement successmsg;
 	
 	public void successMsg(){
 	
-	String expected ="Success: You have modified products!	";
+	String expected ="Success: You have modified products!×";
 	String actual =successmsg.getText();
 	Assert.assertEquals(actual, expected);
 	System.out.println(actual);

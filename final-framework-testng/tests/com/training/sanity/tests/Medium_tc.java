@@ -52,7 +52,8 @@ public class Medium_tc {
 			Thread.sleep(1000);
 			driver.quit();
 		}
-		/*
+		
+		//Uniform project - UFM_043
 		@Test()
 		public void Searchproduct() throws InterruptedException {
 			loginPOM.sendUserName("admin");
@@ -66,20 +67,21 @@ public class Medium_tc {
 			screenShot.captureScreenShot("TC43_3");
 			catelogPOM.productEdit();
 			screenShot.captureScreenShot("TC43_4");
-			//Thread.sleep(3000);
+			Thread.sleep(3000);
 			catelogPOM.selectingData();
 			screenShot.captureScreenShot("TC43_5");
-			//Thread.sleep(3000);
+			Thread.sleep(3000);
 			catelogPOM.clearQuantity();
 			screenShot.captureScreenShot("TC43_6");
-			//Thread.sleep(3000);
+			Thread.sleep(3000);
 			catelogPOM.editQuantity("100");
-			//Thread.sleep(3000);
+			Thread.sleep(3000);
 			screenShot.captureScreenShot("TC43_7");
 			catelogPOM.submitProduct();
-			catelogPOM.successMsg();
-		}*/
+			//catelogPOM.successMsg();
+		}
 		
+		//Uniform project - UFM_044
 		@Test()
 		public void DeleteProduct() throws InterruptedException {
 			loginPOM.sendUserName("admin");
@@ -95,6 +97,6 @@ public class Medium_tc {
 			customersPOM.acceptingalert();
 			
 			
-}	
 }
 
+}
