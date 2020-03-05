@@ -51,6 +51,8 @@ public class LoginTests {
 		Thread.sleep(1000);
 		driver.quit();
 	}
+	
+	//Uniform project - UFM_019
 	@Test()
 	public void deleteReturnlist() throws InterruptedException {
 		loginPOM.sendUserName("admin");
@@ -71,6 +73,7 @@ public class LoginTests {
 		screenShot.captureScreenShot("TC19_5");
 	}
 	
+	//Uniform project - UFM_020
   @Test()
    public void filtercustomerdetails() throws InterruptedException
    {
@@ -90,7 +93,7 @@ public class LoginTests {
 		screenShot.captureScreenShot("TC20");
 		
    }
-  
+  //Uniform project - UFM_021
   @Test()
   public void deleteCustomer() throws InterruptedException
   {
