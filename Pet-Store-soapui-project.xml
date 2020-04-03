@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8eb00112-50a3-42bf-ab99-c347c671360a" activeEnvironment="Default" name="Pet_Store" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="a247fe3e-27fd-4130-8ad9-5be00880d9d6" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://petstore.swagger.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://petstore.swagger.io</con:endpoint></con:endpoints><con:resource name="V2" path="/v2/pet" id="c6344e85-0dc4-434e-aca8-ca6562ada981"><con:settings/><con:parameters/><con:method name="V2 1" id="5214aa7e-eed5-4579-b16e-2be67ad9c6ce" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:pet="http://petstore.swagger.io/v2/pet">pet:Response</con:element></con:representation><con:request name="Create_Pet" id="811d7225-ba18-4357-8847-96163ccbc044" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request>{
+  "id": 0,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}</con:request><con:originalUri>http://petstore.swagger.io/v2/pet</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="{petId}" path="/v2/pet/{petId}" id="e7120178-fc2d-494c-96be-57a2e251471d"><con:settings/><con:parameters><con:parameter><con:name>petId</con:name><con:value>petId</con:value><con:style>TEMPLATE</con:style><con:default>petId</con:default></con:parameter></con:parameters><con:method name="Method 1" id="9c013add-1684-4b20-b18f-7fd5db29163e" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://petstore.swagger.io/v2/pet/1845563262948980518">ns:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>Application/JSON</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:ns="http://petstore.swagger.io/v2/pet/1845563262948980518">ns:Fault</con:element></con:representation><con:request name="GEt_Pet_Details" id="6cbf80a5-6799-4d73-8d85-093d1164e42c" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="petId" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request></con:method></con:resource></con:interface><con:testSuite id="038dce00-1606-4382-9a63-93503aebe2e0" name="Positive"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b7916963-39f8-4f83-884f-7704ba01f06f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Pet_Store_Test" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Create_ID" id="7bb26bd2-d7c5-4ef1-9e8f-3ea66d783ed3"><con:settings/><con:config service="http://petstore.swagger.io" resourcePath="/v2/pet" methodName="V2 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create_ID" id="811d7225-ba18-4357-8847-96163ccbc044" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request>{
+  "id": 0,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}</con:request><con:originalUri>http://petstore.swagger.io/v2/pet</con:originalUri><con:assertion type="Simple Contains" id="366fc8cd-cb18-4e0e-be11-ebc55bb13549" name="Contains"><con:configuration><token>doggie</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="16f6c39c-8f21-474a-8fb4-a5fd8b542307" name="dagfg"><con:configuration><token/><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="b6839a31-1879-4800-ac6b-6e9a5ba922ae" name="JsonPath RegEx Match"><con:configuration/></con:assertion><con:assertion type="JsonPath Match" id="27e73348-b6bc-4e24-8e8e-5e7492a8cad7" name="JsonPath Match"><con:configuration><path>$.name</path><content>doggie</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="67a46e94-d90e-4b10-9b6c-71342ac2200c" name="JsonPath Match 1"><con:configuration><path>$.name</path><content>bag</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Simple Contains" id="0bc28bb4-9a67-4ae2-899d-0b92c555c010" name="Contains 2"><con:configuration><token>hhjwh</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2147b5dc-27d5-468e-9d21-a1ba89d9dafc" name="JsonPath Match 2"><con:configuration><path>$.tags[:1].name</path><content>string</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="af6f3070-0f5d-48c4-945a-3fef27265b0c" name="JsonPath Match 3"><con:configuration><path>$.tags[:1].name</path><content>[String]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="25ce3ea3-d129-4699-850f-a542243d60fc" name="JsonPath Match 4"><con:configuration><path>$.tags.[:1].name</path><content>[String]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="31d86106-0b56-446f-9231-f230e31d6101" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="ca0447e3-df5b-4e5a-b3b8-a7294bfe82c3" name="Invalid HTTP Status Codes"><con:configuration><codes>400</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="fdee6440-09eb-4a4c-b2ee-d58f5319f6ec" name="JsonPath Match 5"><con:configuration><path>$.name</path><content>doggi</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="27b57980-2c0b-4863-9997-dc1079cc7768" name="JsonPath Existence Match"><con:configuration><path>$.id</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="5f444c11-212a-47aa-9e47-8daa07fb031d" name="JsonPath Count"><con:configuration><path>$.name</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="1dc686b5-a7d1-4d75-9028-ebef78dd832a"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>pet_ID</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Create_ID</con:sourceStep><con:sourcePath>$.id</con:sourcePath><con:targetType>petId</con:targetType><con:targetStep>Get_PEt_DEtails</con:targetStep><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Get_PEt_DEtails" id="9d6d6a50-e5e2-4368-9945-a479f7d5c05c"><con:settings/><con:config service="http://petstore.swagger.io" resourcePath="/v2/pet/{petId}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Get_PEt_DEtails" id="6cbf80a5-6799-4d73-8d85-093d1164e42c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-Type" value="Application/JSON" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>http://petstore.swagger.io/v2/pet/1845563262948980518</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="petId" value="1845563262948980541" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="10ecec17-2718-4d00-8f60-8aa1c213a600" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Pet_Store_1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Create_ID" id="47600c83-a676-46fd-9c1d-97fb54263c54"><con:settings/><con:config service="http://petstore.swagger.io" resourcePath="/v2/pet" methodName="V2 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create_ID" id="811d7225-ba18-4357-8847-96163ccbc044" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request>{
+  "id": 0,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "${Properties#Pet_Name}",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}</con:request><con:originalUri>http://petstore.swagger.io/v2/pet</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="Properties" id="8ec8a196-2d11-4bab-b73d-4ada71137d07"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Pet_Name</con:name><con:value>caty</con:value></con:property><con:property><con:name>Pet_ID</con:name><con:value>doggie</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="569ba64b-0321-487a-b15f-d07483a917fd"><con:settings/><con:config><script>import java.io.File
+import java.util.Date
+import jxl.*
+
+import groovy.xml.MarkupBuilder
+import org.custommonkey.xmlunit.*
+
+//read excelfile
+
+Workbook wb = Workbook.getWorkbook(new File('C:/Rakshitha/Api_testing_dum.xls'))
+
+sheet = wb.getSheet(0)
+String p=sheet.getCell(0,0).getContents()
+//def writer = new FileWriter('D:/TestSample1.xls')
+//log.info p
+//testRunner.testCase.getTestStepByName("Properties").setPropertyValue( "Pet_Name", p )
+testRunner.testCase.getTestStepByName("Properties").setPropertyValue( "Pet_ID", p )
+
+log.info p
+
+def getLocalPropValue = testRunner.testCase.getTestStepByName("Properties").getPropertyValue("Pet_ID")
+log.info(getLocalPropValue)
+
+value = testRunner.getTestCase().name
+log.info value
+
+value1 = testRunner.getTestCase().getTestSuite().name
+log.info value1
+
+wb.close()</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="6afe689a-306f-4950-848a-b69a97f9face"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>pet_ID</con:name><con:sourceType>Pet_ID</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath/><con:targetType>petId</con:targetType><con:targetStep>Get_PEt_DEtails</con:targetStep><con:type>XPATH</con:type><con:targetTransferType>XPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Get_PEt_DEtails" id="2981cdae-11b1-4f30-9584-3cc292595c23"><con:settings/><con:config service="http://petstore.swagger.io" resourcePath="/v2/pet/{petId}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Get_PEt_DEtails" id="6cbf80a5-6799-4d73-8d85-093d1164e42c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-Type" value="Application/JSON" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>http://petstore.swagger.io/v2/pet/1845563262948980518</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="petId" value="doggie" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
